@@ -1,0 +1,122 @@
+/* Modal Styles */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity (Overlay) */
+  display: none; /* Hidden by default - Use 'flex' to show and center */
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* Padding for small screens */
+}
+
+.modal-content {
+  background-color: var(--background);
+  margin: auto; /* Auto margins work with flex centering */
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Max width */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* For close button positioning */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+  margin: 0; /* Remove default margins */
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.modal-close-btn {
+  color: var(--foreground);
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  line-height: 1;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: #dc3545; /* Example hover color */
+  text-decoration: none;
+  outline: none;
+}
+
+.modal-body .form-group {
+  margin-bottom: 1.2rem; /* Adjust spacing if needed */
+}
+
+/* Form elements within modal */
+#createUserForm label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+#createUserForm input,
+#createUserForm select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s,
+    color 0.3s;
+}
+
+#createUserForm input:focus,
+#createUserForm select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+#createUserForm button[type="submit"] {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: var(--radius);
+  border: none;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+#createUserForm button[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Style for error message within modal */
+.modal-error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  display: none; /* Hidden by default */
+}

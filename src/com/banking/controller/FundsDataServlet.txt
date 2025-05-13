@@ -1,0 +1,48 @@
+package com.banking.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.DecimalFormat;
+import java.util.Random;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import org.json.JSONObject;
+
+/**
+ * Servlet that provides funds data for the admin dashboard
+ */
+@WebServlet("/api/funds-data")
+public class FundsDataServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Set content type
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+
+        // In a real application, these values would come from a database
+        // For this example, we'll use mock data
+        double totalFunds = 10000000.00; // $10 million
+        double loanedAmount = 7250000.00; // $7.25 million
+        double availableFunds = totalFunds - loanedAmount;
+        double utilizationRate = (loanedAmount / totalFunds) * 100;
+
+        // Format as JSON
+        JSONObject jsonResponse = new JSONObject();
+        jsonResponse.put("totalFunds", totalFunds);
+        jsonResponse.put("availableFunds", availableFunds);
+        jsonResponse.put("totalLoaned", loanedAmount);
+        jsonResponse.put("utilizationRate", utilizationRate);
+
+        // Write JSON response
+        PrintWriter out = response.getWriter();
+        out.print(jsonResponse.toString());
+        out.flush();
+    }
+}

@@ -1,0 +1,116 @@
+/* Stats Container */
+.stats-container {
+  display: flex;
+  justify-content: space-around; /* Or space-between */
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 150px; /* Adjust as needed */
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-foreground);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--foreground);
+}
+
+.stat-value.pending {
+  color: #e4a11b; /* Yellow/Orange for pending */
+}
+
+.stat-value.approved {
+  color: #22c55e; /* Green for approved */
+}
+
+.stat-value.rejected {
+  color: #dc3545; /* Red for rejected */
+}
+
+/* Loan Table Styling */
+.loan-requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.loan-requests-table th,
+.loan-requests-table td {
+  padding: 0.8rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.loan-requests-table thead th {
+  background-color: var(--secondary);
+  font-weight: 600;
+}
+
+.loan-requests-table tbody tr:hover {
+  background-color: var(--secondary-hover);
+}
+
+.loan-requests-table .actions-cell {
+  white-space: nowrap; /* Prevent action buttons from wrapping too soon */
+}
+
+.loan-requests-table .status-pending {
+  color: #e4a11b;
+  font-weight: bold;
+}
+
+.loan-requests-table .status-approved {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.loan-requests-table .status-rejected {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.pagination-controls button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+}
+
+.no-requests {
+  text-align: center;
+  padding: 2rem;
+  color: var(--secondary-foreground);
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+}

@@ -1,0 +1,106 @@
+/* Admin-specific styles */
+
+/* Stats Container */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 0.8rem;
+  background-color: var(--secondary);
+  border-radius: var(--radius);
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.stat-value.pending {
+  color: #e4a11b; /* Yellow/orange for pending */
+}
+
+.stat-value.approved {
+  color: #22c55e; /* Green for approved */
+}
+
+.stat-value.rejected {
+  color: #c52222; /* Red for rejected */
+}
+
+/* Dashboard card customizations */
+.dashboard-card p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+body.dark-mode .dashboard-card p {
+  color: #9ca3af;
+}
+
+.dashboard-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dashboard-card li {
+  margin-bottom: 0.8rem;
+}
+
+.dashboard-card li a,
+.dashboard-card .action-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.dashboard-card li a:hover,
+.dashboard-card .action-link:hover {
+  text-decoration: underline;
+}
+
+/* Action buttons */
+.action-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  border: none;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.action-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.action-button.secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--border);
+}
+
+.action-button.secondary:hover {
+  background-color: var(--secondary-hover);
+}

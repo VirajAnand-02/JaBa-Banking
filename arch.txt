@@ -1,0 +1,76 @@
+e:/programming/JaBa/Banking/
+├── src/
+│   └── com/
+│       └── banking/
+│           ├── controller/      # Servlet controllers
+│           ├── model/           # Data models
+│           ├── dao/             # Data Access Objects
+│           ├── service/         # Business logic
+│           ├── util/            # Utility classes
+│           ├── filter/          # Security filters
+│           └── listener/        # Context listeners
+├── WebContent/
+│   ├── WEB-INF/
+│   │   ├── web.xml             # Configuration
+│   │   └── lib/                # External libraries
+│   ├── pages/                  # JSP pages
+│   │   ├── customer/           # Customer-specific pages
+│   │   ├── employee/           # Employee-specific pages
+│   │   └── admin/              # Admin-specific pages
+│   ├── css/                    # Stylesheets
+│   ├── js/                     # JavaScript files
+│   └── index.html              # Landing page
+
+
+e:/programming/JaBa/Banking/
+├── src/main/java/
+│   └── com/
+│       └── banking/
+│           ├── controller/       # Servlet controllers
+│           │   ├── auth/
+│           │   │   ├── AuthServlet.java
+│           │   │   ├── LogoutServlet.java
+│           │   │   └── RegisterServlet.java
+│           │   ├── customer/
+│           │   │   ├── DashboardServlet.java
+│           │   │   ├── AccountServlet.java
+│           │   │   └── TransferServlet.java
+│           │   ├── employee/
+│           │   │   └── CustomerManagementServlet.java
+│           │   └── admin/
+│           │       └── UserManagementServlet.java
+│           ├── model/           # Data models
+│           │   ├── User.java
+│           │   ├── Account.java
+│           │   └── Transaction.java
+│           ├── dao/             # Data Access Objects
+│           │   ├── UserDAO.java
+│           │   ├── AccountDAO.java
+│           │   └── TransactionDAO.java
+│           ├── service/         # Business logic
+│           │   ├── AuthService.java
+│           │   ├── AccountService.java
+│           │   └── TransactionService.java
+│           ├── util/            # Utility classes
+│           │   ├── DatabaseUtil.java
+│           │   ├── PasswordUtil.java
+│           │   └── ValidationUtil.java
+│           └── filter/          # Security filters
+│               └── AuthenticationFilter.java
+├── src/main/webapp/
+│   ├── WEB-INF/
+│   │   ├── web.xml             # Configuration
+│   │   └── lib/                # External libraries
+│   ├── css/                    
+│   │   └── style.css           # Your existing CSS
+│   ├── js/                     
+│   │   └── scripts.js          # Common JavaScript
+│   ├── login.html              # Your existing login page (modified)
+│   └── pages/                  # JSP pages
+│       ├── customer/           
+│       │   └── dashboard.jsp   # Customer dashboard
+│       ├── employee/           
+│       │   └── dashboard.jsp   # Employee dashboard
+│       └── admin/              
+│           └── dashboard.jsp   # Admin dashboard
+└── pom.xml                     # Maven project file
